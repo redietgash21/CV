@@ -4,20 +4,36 @@
 
 
 
-
-import Header from './components/Header.jsx'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom"
 import './App.css'
-import Home from './components/Home.jsx'
+
 import Designs from './components/Designs.jsx'
+
+import MainInterface from "./components/MainInterface.jsx"
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:   <MainInterface/>,
+  },
+  {
+    path:"/design",
+    element: <Designs/>,
+  }
+])
 
 function App() {
 
 
   return (
     <>
-     <Header/>
-     <Home/>
-     <Designs/>
+    <RouterProvider router={router}/>
+   
     </>
   )
 }

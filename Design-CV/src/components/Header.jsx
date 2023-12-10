@@ -13,7 +13,7 @@ function Header() {
         <>
         <div className="header">
             <div className="left">
-                <span>Home</span>
+                <span href="#about">Home</span>
                 <span>Design</span>        
             </div>
             <div className="right">
