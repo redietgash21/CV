@@ -4,9 +4,11 @@ function Designs(){
 
     return (
       <>
-        <div className="headerDesign">
-            The Designs are below
-        </div>
+          <div className="design">
+                <div className="headerDesign">
+                    The Designs are below
+                </div>
+          </div>
       </>
     )
   

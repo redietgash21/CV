@@ -7,7 +7,7 @@
    right: 0;
    top: 60px;
    height: 100vh;
-   z-index: -1;
+   
 }
 .div1{
     font-size: 300px;
@@ -27,4 +27,5 @@
     height: 60px;
     font-size: 30px;
     margin-left: 750px;
+    background-color: blue;
 }

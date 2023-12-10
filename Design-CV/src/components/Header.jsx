@@ -17,8 +17,8 @@ function Header() {
                 <span>Design</span>        
             </div>
             <div className="right">
-                <button>LOGIN</button>
-                <button>SIGNUP</button>
+                <button className="headerBtn">LOGIN</button>
+                <button className="headerBtn">SIGNUP</button>
             
             </div>
         </div>
