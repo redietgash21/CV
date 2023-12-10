@@ -1,11 +1,11 @@
 
 .home{
-    background-color: aquamarine;
+    background-color: #E7FBFF;
     margin: 2px;
    position: absolute;
    left: 0;
    right: 0;
-   top: 60px;
+   top: 70px;
    height: 100vh;
    
 }

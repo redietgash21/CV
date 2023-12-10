@@ -9,8 +9,9 @@
     top: 0;
     left: 0;
     padding: 12px;
-    background-color: aquamarine;
+    background-color: #E7FBFF;
     width: 98%;
+    border-style: outset;
     z-index: 2;
 }
 .headerBtn{
