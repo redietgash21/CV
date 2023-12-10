@@ -15,6 +15,8 @@ import './App.css'
 import Designs from './components/Designs.jsx'
 
 import MainInterface from "./components/MainInterface.jsx"
+import TheForm from "./components/TheForm.jsx"
+import ErrorPage from "./components/ErrorPage.jsx"
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path:"/design",
-    element: <Designs/>,
+    element: <TheForm/>,
+  },
+  {
+    path:"*",
+    element: <ErrorPage/>
   }
 ])
 
