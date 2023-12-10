@@ -1,0 +1,30 @@
+
+.home{
+    background-color: aquamarine;
+    margin: 2px;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 60px;
+   height: 100vh;
+   z-index: -1;
+}
+.div1{
+    font-size: 300px;
+    font-weight: 600;
+    margin-top: -40px;
+    color: black;
+    margin-bottom: -170px;
+}
+.div2{
+    font-size: 250px;
+    font-weight: 600;
+    margin-bottom: -40px;
+    color: black;
+}
+.start{
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    margin-left: 750px;
+}
