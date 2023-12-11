@@ -1,0 +1,33 @@
+
+
+.form {
+position: absolute;
+top: 0;
+left: 0;
+padding: 12px;
+background-color: #E7FBFF;
+width: 98%;
+}
+
+
+hr{
+    background-color: #71FFF6;
+    width: 95%;
+    height: 5px;
+}
+
+.formBtn{
+    background-color: #3A5AAC;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+.firstLine{
+    display: flex;
+}
+.img{
+    border-style: outset;
+    border-radius: 25px;
+    width: 20%;
+    height: 20vh;
+}
