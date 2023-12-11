@@ -27,7 +27,41 @@ hr{
 }
 .img{
     border-style: outset;
-    border-radius: 25px;
-    width: 20%;
+    border-radius: 50%;
+    width: 10%;
     height: 20vh;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+img{
+  padding-top: 42%;
+}
+
+.secondLine{
+    display: inline-flex;
+    gap: 15%;
+
+}
+
+.colLeft{
+    position: absolute;
+    float: left;
+    left: 4%;
+
+}
+.colCenter{
+    float: none;
+    width: 100%;
+    margin-left: 5% ;
+}
+.colRight{
+   
+    float: right;
+    width: 45%;
+    margin-left: 35% ;
+}
+.downloadBtn{
+    background-color: #3A5AAC;
+    float: right;
+    margin: 3% 3% 3% 0;
 }
