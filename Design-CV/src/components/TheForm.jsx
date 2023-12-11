@@ -7,14 +7,16 @@
 
 
 import "./TheForm.css"
-
+import {Link} from "react-router-dom"
 function TheForm () {
 
     return (
       <>
        <div className="form">
           <div className="formHeader">
-            <button className="formBtn">Back to home</button>
+            <button className="formBtn">
+              <Link to="/">Back to home</Link>
+              </button>
           </div>
           <hr />
           <div className="formMain">
