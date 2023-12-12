@@ -7,9 +7,12 @@
 
 
 import "./TheForm.css"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import html2canvas from "html2canvas"
+import jsPDF from "jspdf"
 import {Link} from "react-router-dom"
 function TheForm () {
+   const pdfRef = useRef();
    const [firstName, setFirstName]=useState("")
    const [lastName, setLastName]=useState("")
    const [middleName, setMiddleName]=useState("")
@@ -20,6 +23,23 @@ function TheForm () {
    const [about, setAbout]=useState("")
    const [experiance, setExperiance]=useState("")
    const [education, setEducation]=useState("")
+   
+   const downloadPDF=()=>{
+    const input = pdfRef.current;
+    html2canvas(input).then((canvas)=>{
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF("p","mm","a4",true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth/imgWidth,pdfHeight/imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio)/2;
+      const imgY = 30;
+      pdf.addImage(imgData, 'PNG',imgX,imgY, imgWidth*ratio, imgHeight*ratio);
+      pdf.save('CVv.pdf');
+    })
+   }
 
     return (
       <>
@@ -30,7 +50,7 @@ function TheForm () {
               </button>
           </div>
           <hr />
-          <div className="formMain">
+          <div className="formMain" ref={pdfRef}>
             <div className="firstLine">
               <div className="img">
                 <img src="" alt="upload photo" />
@@ -120,7 +140,7 @@ function TheForm () {
               </div>
             </div>
           </div>
-          <button className="downloadBtn">Download CV</button>
+          <button className="downloadBtn" onClick={downloadPDF}>Download CV</button>
        </div>
       </>
     )
