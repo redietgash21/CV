@@ -21,7 +21,7 @@ function Style1 (props) {
         </div>
         <div>
             <i></i>
-
+<div></div>
             <i></i>
 
             <i></i>
