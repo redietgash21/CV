@@ -140,6 +140,7 @@ function TheForm () {
               </div>
             </div>
           </div>
+          {firstName}
           <button className="downloadBtn" onClick={downloadPDF}>Download CV</button>
        </div>
       </>
