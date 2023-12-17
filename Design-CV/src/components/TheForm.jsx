@@ -7,9 +7,10 @@
 
 
 import "./TheForm.css"
-import React, { useState, useEffect, useRef } from "react";
+import  { useState,  useRef } from "react";
 import html2canvas from "html2canvas"
 import jsPDF from "jspdf"
+import Style1 from "./Style1"
 import {Link} from "react-router-dom"
 function TheForm () {
    const pdfRef = useRef();
@@ -140,9 +141,22 @@ function TheForm () {
               </div>
             </div>
           </div>
-          {firstName}
+          
           <button className="downloadBtn" onClick={downloadPDF}>Download CV</button>
        </div>
+       <div className="sty">
+       <Style1 firstName={firstName}
+               lastName={lastName}
+               middleName={middleName}
+               age={age}
+               education={education}
+               phoneNumber={phoneNumber}
+               experiance={experiance}
+               about={about}
+               gmail={gmail}
+               address={address}   
+                  />   
+        </div>
       </>
     )
   }   
