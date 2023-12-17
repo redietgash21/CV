@@ -25,6 +25,7 @@ function TheForm () {
    const [about, setAbout]=useState("")
    const [experiance, setExperiance]=useState("")
    const [education, setEducation]=useState("")
+   const [fileName, setFileName]=useState("")
    const [image, setImage]=useState( "https://th.bing.com/th/id/OIP.S171c9HYsokHyCPs9brbPwHaGP?pid=ImgDet&rs=1");
   //  const [previews, setPreviewa]=useState();
 
@@ -44,7 +45,7 @@ function TheForm () {
       const imgX = (pdfWidth - imgWidth * ratio)/2;
       const imgY = 30;
       pdf.addImage(imgData, 'PNG',imgX,imgY, imgWidth*ratio, imgHeight*ratio);
-      pdf.save('CVv.pdf');
+      pdf.save(fileName);
     })
    }
    const handleImageClick =()=>{
@@ -157,10 +158,14 @@ function TheForm () {
                 ></textarea>
                 <p>Experiance</p>
                 <textarea name="" id="" cols="30" rows="10"></textarea>
+                
               </div>
             </div>
           </div>
-          
+          <p>File name</p>
+         <input type="text"  onChange={(event)=>{
+                            setFileName(event.target.value)
+                          }}/>
           <button className="downloadBtn" onClick={downloadPDF}>Download CV</button>
        </div>
        <div className="sty">
