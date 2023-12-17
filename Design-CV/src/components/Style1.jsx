@@ -1,9 +1,12 @@
 
-
-
-
-
-
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faPhone, 
+        faEnvelope, 
+        faAddressBook,
+        faBook,
+        faEarth
+       
+      } from "@fortawesome/free-solid-svg-icons"
 
 
 
@@ -18,34 +21,30 @@ function Style1 (props) {
   const about=props.about;
   const experiance=props.experiance;
   const education=props.education;
+  const image=props.image;
     return (
       <div>
         <div className="imgCircle">
-            <img></img>
+         <img src={image}/>
         </div>
         <div className="name">
-            <span>{firstName}</span>
-            <span>{middleName}</span>
-            <span>{lastName}</span>  
+          <span>{firstName}</span>
+          <span>{middleName}</span>
+          <span>{lastName}</span>  
         </div>
         <div>
-            <i></i>
-            <span>{phoneNumber}</span>
-<div></div>
-            <i></i>
-
-            <i></i>
-
-        </div>
+          <FontAwesomeIcon icon={faPhone} />
+          <span>{phoneNumber}</span>
+          <FontAwesomeIcon icon={faAddressBook} />
+          <span>{address}</span>
+          <FontAwesomeIcon icon={faEnvelope} />
+          <span>{gmail}</span> 
         <div>
+
+      </div>
             
-        </div>
-        <div>
 
-        </div>
-        <div>
-
-        </div>
+        </div> 
       </div>
     )
   

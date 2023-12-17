@@ -174,6 +174,7 @@ function TheForm () {
                about={about}
                gmail={gmail}
                address={address}   
+               image={image}
                   />   
         </div>
       </>
