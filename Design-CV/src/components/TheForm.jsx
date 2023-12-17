@@ -14,6 +14,7 @@ import Style1 from "./Style1"
 import {Link} from "react-router-dom"
 function TheForm () {
    const pdfRef = useRef();
+   const inputRef = useRef(null);
    const [firstName, setFirstName]=useState("")
    const [lastName, setLastName]=useState("")
    const [middleName, setMiddleName]=useState("")
@@ -24,12 +25,14 @@ function TheForm () {
    const [about, setAbout]=useState("")
    const [experiance, setExperiance]=useState("")
    const [education, setEducation]=useState("")
-   const [files, setFiles]=useState();
+   const [image, setImage]=useState( "https://th.bing.com/th/id/OIP.S171c9HYsokHyCPs9brbPwHaGP?pid=ImgDet&rs=1");
   //  const [previews, setPreviewa]=useState();
 
 
    const downloadPDF=()=>{
     const input = pdfRef.current;
+   
+
     html2canvas(input).then((canvas)=>{
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF("p","mm","a4",true);
@@ -44,6 +47,12 @@ function TheForm () {
       pdf.save('CVv.pdf');
     })
    }
+   const handleImageClick =()=>{
+     inputRef.current.click();
+   }
+   const handleImageChange =(e)=>{
+     setImage(URL.createObjectURL(e.target.files[0]));
+   }
 
     return (
       <>
@@ -56,17 +65,14 @@ function TheForm () {
           <hr />
           <div className="formMain" ref={pdfRef}>
             <div className="firstLine">
-              <div className="img">
+              <div className="img" onClick={handleImageClick}>
+                <img src={image} alt="Me"/> 
                 <input
                   type="file"
                   accept="image/jpg, image/jpeg, image/png"
-                  multiple
-                  defaultValue={files}
-                  onChange={(e)=>{
-                      if(e.target.files && e.target.length>0){
-                        setFiles(e.target.files);
-                      }
-                  }}
+                  ref={inputRef}
+                  onChange={handleImageChange}
+                  style={{display:"none"}}
                 />
               </div>
               <div className="row">
