@@ -24,7 +24,10 @@ function TheForm () {
    const [about, setAbout]=useState("")
    const [experiance, setExperiance]=useState("")
    const [education, setEducation]=useState("")
-   
+   const [files, setFiles]=useState();
+  //  const [previews, setPreviewa]=useState();
+
+
    const downloadPDF=()=>{
     const input = pdfRef.current;
     html2canvas(input).then((canvas)=>{
@@ -54,7 +57,17 @@ function TheForm () {
           <div className="formMain" ref={pdfRef}>
             <div className="firstLine">
               <div className="img">
-                <img src="" alt="upload photo" />
+                <input
+                  type="file"
+                  accept="image/jpg, image/jpeg, image/png"
+                  multiple
+                  defaultValue={files}
+                  onChange={(e)=>{
+                      if(e.target.files && e.target.length>0){
+                        setFiles(e.target.files);
+                      }
+                  }}
+                />
               </div>
               <div className="row">
                 <div className="">
