@@ -46,26 +46,28 @@ function Style1 (props) {
    }
     return (
       <div ref={pdfRef} className="mainDiv">
-        <div className="imgCircle">
-         <img src={image}/>
-        </div>
-        <div className="floatRight">
-          <div className="name">
-            <span className="styleStraight">{firstName}</span>
-            <span className="styleStraight">{middleName}</span>
-            <span className="styleStraight">{lastName}</span>  
+        <div className="headerStyle1">
+          <div className="imgCircle">
+          <img src={image}/>
           </div>
-          <div>
-            <FontAwesomeIcon icon={faPhone} />
-            <span>{phoneNumber}</span>
-            <FontAwesomeIcon icon={faAddressBook} />
-            <span>{address}</span>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span>{gmail}</span> 
-           <hr className="hr"/>
-          </div>            
-        </div> 
-        <div>
+          <div className="floatRight">
+            <div className="name">
+              <span className="styleStraight">{firstName}</span>
+              <span className="styleStraight">{middleName}</span>
+              <span className="styleStraight">{lastName}</span>  
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faPhone} />
+              <span>{phoneNumber}</span>
+              <FontAwesomeIcon icon={faAddressBook} />
+              <span>{address}</span>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span>{gmail}</span> 
+            <hr className="hr"/>
+            </div>            
+          </div> 
+        </div>
+        <div className="bodyPart">
           <div>
             <h4>About Me</h4>
             <p>{about}</p>
