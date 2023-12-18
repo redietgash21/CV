@@ -166,7 +166,12 @@ function TheForm () {
          <input type="text"  onChange={(event)=>{
                             setFileName(event.target.value)
                           }}/>
-          <button className="downloadBtn" onClick={downloadPDF}>Download CV</button>
+          <button className="downloadBtn" onClick={downloadPDF}>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+          </button>
        </div>
        <div className="sty">
        <Style1 firstName={firstName}

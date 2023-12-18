@@ -49,26 +49,36 @@ function Style1 (props) {
         <div className="imgCircle">
          <img src={image}/>
         </div>
-         <div className="floatRight">
-            <div className="name">
-              <span className="styleStraight">{firstName}</span>
-              <span className="styleStraight">{middleName}</span>
-              <span className="styleStraight">{lastName}</span>  
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faPhone} />
-              <span>{phoneNumber}</span>
-              <FontAwesomeIcon icon={faAddressBook} />
-              <span>{address}</span>
-              <FontAwesomeIcon icon={faEnvelope} />
-              <span>{gmail}</span> 
-            <div>
+        <div className="floatRight">
+          <div className="name">
+            <span className="styleStraight">{firstName}</span>
+            <span className="styleStraight">{middleName}</span>
+            <span className="styleStraight">{lastName}</span>  
           </div>
-          <hr className="hr"/>
-      </div>
-            
-
+          <div>
+            <FontAwesomeIcon icon={faPhone} />
+            <span>{phoneNumber}</span>
+            <FontAwesomeIcon icon={faAddressBook} />
+            <span>{address}</span>
+            <FontAwesomeIcon icon={faEnvelope} />
+            <span>{gmail}</span> 
+           <hr className="hr"/>
+          </div>            
         </div> 
+        <div>
+          <div>
+            <h4>About Me</h4>
+            <p>{about}</p>
+          </div>
+          <div>
+            <h4>Experience</h4>
+            <p>{experiance}</p>
+          </div>
+          <div>
+            <h4>Education</h4>
+            <p>{education}</p>
+          </div>
+        </div>
       </div>
     )
   
