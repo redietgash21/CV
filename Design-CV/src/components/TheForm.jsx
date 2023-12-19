@@ -166,15 +166,8 @@ function TheForm () {
          <input type="text"  onChange={(event)=>{
                             setFileName(event.target.value)
                           }}/>
-          <button className="downloadBtn" onClick={downloadPDF}>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-          </button>
-       </div>
-       <div className="sty">
-       <Style1 firstName={firstName}
+          <div className="divSty1">
+            <Style1 firstName={firstName}
                lastName={lastName}
                middleName={middleName}
                age={age}
@@ -186,6 +179,16 @@ function TheForm () {
                address={address}   
                image={image}
                   />   
+          </div>
+          <button className="downloadBtn" onClick={downloadPDF}>
+            <span className="sty1btn">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+          </button>
+       </div>
+       <div className="sty">
+       
         </div>
       </>
     )

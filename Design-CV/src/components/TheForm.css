@@ -34,7 +34,6 @@ hr{
     margin-left: 5%;
 }
 .img img{
-  
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -71,4 +70,16 @@ hr{
 
 .sty{
     margin-top: 2000px;
+}
+.divSty1{
+    position: absolute;
+    background-color: #E7FBFF;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+   
+}
+.sty1btn:hover{
+    opacity: 1;
+    pointer-events: auto;
 }
