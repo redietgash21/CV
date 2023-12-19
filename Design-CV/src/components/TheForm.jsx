@@ -26,6 +26,7 @@ function TheForm () {
    const [experiance, setExperiance]=useState("")
    const [education, setEducation]=useState("")
    const [fileName, setFileName]=useState("")
+   const [hiddenSty,setHiddenSty]=useState(false)
    const [image, setImage]=useState( "https://th.bing.com/th/id/OIP.S171c9HYsokHyCPs9brbPwHaGP?pid=ImgDet&rs=1");
   //  const [previews, setPreviewa]=useState();
 
@@ -64,7 +65,7 @@ function TheForm () {
               </button>
           </div>
           <hr />
-          <div className="formMain" ref={pdfRef}>
+          <div className="formMain" >
             <div className="firstLine">
               <div className="img" onClick={handleImageClick}>
                 <img src={image} alt="Me"/> 
@@ -166,8 +167,8 @@ function TheForm () {
          <input type="text"  onChange={(event)=>{
                             setFileName(event.target.value)
                           }}/>
-          <div className="divSty1">
-            <Style1 firstName={firstName}
+          <div className="divSty1" ref={pdfRef}>
+           {hiddenSty && <Style1 firstName={firstName}
                lastName={lastName}
                middleName={middleName}
                age={age}
@@ -178,14 +179,12 @@ function TheForm () {
                gmail={gmail}
                address={address}   
                image={image}
-                  />   
+                  /> }  
           </div>
-          <button className="downloadBtn" onClick={downloadPDF}>
-            <span className="sty1btn">1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
+          <button className="downloadBtn" onClick={()=>{setHiddenSty(true);downloadPDF()}}>
+           Download PDF
           </button>
+          {console.log("---------------------",hiddenSty)}
        </div>
        <div className="sty">
        
