@@ -1,0 +1,33 @@
+
+.loginAll{
+    width: 200%;
+    height: 100vh;
+    align-items: center;
+    background-color: red;
+    
+}
+
+
+.loginAll .loginMain{
+    background-color: #E7FBFF;
+   margin: 100px;
+    width: 50%;
+    height: 80vh;
+    
+}
+.loginAll .loginMain h3{
+    font-size: 60px;
+}
+.loginAll .loginMain{
+
+}
+.loginAll .loginMain input{
+ width: 50%;
+ font-size: 25px;
+ margin: 2% 0 2%;
+}
+.loginAll .loginMain button{
+    margin-left: 40%;
+    background-color: #3A5AAC;
+    font-size: large;
+}

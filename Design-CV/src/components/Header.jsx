@@ -4,7 +4,7 @@
 
 
 
-
+import { Link } from "react-router-dom"
 
 import "./Header.css"
 function Header() {
@@ -17,7 +17,9 @@ function Header() {
                 <span>Design</span>        
             </div>
             <div className="right">
-                <button className="headerBtn">LOGIN</button>
+                <button className="headerBtn">
+                    <Link to="./login">LOGIN</Link>
+                </button>
                 <button className="headerBtn">SIGNUP</button>
             
             </div>
