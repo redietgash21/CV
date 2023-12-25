@@ -18,6 +18,7 @@ import MainInterface from "./components/MainInterface.jsx"
 import TheForm from "./components/TheForm.jsx"
 import Login from "./components/Login.jsx"
 import ErrorPage from "./components/ErrorPage.jsx"
+import Signup from "./components/Signup.jsx"
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path:"/login",
     element: <Login/>,
+  },
+  {
+    path:"/signup",
+    element: <Signup/>,
   },
   {
     path:"*",
