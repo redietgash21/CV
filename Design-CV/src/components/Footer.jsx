@@ -9,11 +9,18 @@ import { FaLinkedin } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
  function Footer()  {
  
     return (
       <div className="footer">
          <div className="contactDiv">
+         <span className="socialIcon">
+                        <a  target="-blank"
+                        href="https://redietgash21.github.io/Portifilo/">
+                            <TbWorldWww/>
+                        </a>
+                    </span>
                 <span className="socialIcon">
                                     <a  target="-blank"
                                     href="https://www.linkedin.com/in/rediet-gashaw/">
@@ -28,13 +35,13 @@ import { FaTiktok } from "react-icons/fa";
                                 </span>
                     <span className="socialIcon">
                                     <a  target="-blank"
-                                    href="#">
+                                    href="https://github.com/redietgash21">
                                         <FaGithub/>
                                     </a>
                                 </span>
                     <span className="socialIcon">
                         <a  target="-blank"
-                        href="#">
+                        href="https://mail.google.com/mail/u/0/#inbox">
                             <CgMail/>
                         </a>
                     </span>
@@ -50,6 +57,8 @@ import { FaTiktok } from "react-icons/fa";
                             <FaTiktok/>
                         </a>
                     </span>
+                   
+                    
                 </div>
       </div>
     )
