@@ -1,12 +1,20 @@
 
+
+
+
+
+
+
+
 .home{
     background-color: #E7FBFF;
-    margin: 2px;
+    /* margin: 2px; */
    position: absolute;
    left: 0;
    right: 0;
+   /* width: 100vw; */
    top: 70px;
-   height: 100vh;
+   min-height: 100vh;
    
 }
 .div1{
@@ -19,13 +27,18 @@
 .div2{
     font-size: 250px;
     font-weight: 600;
-    margin-bottom: -40px;
+ 
     color: black;
 }
 .start{
     width: 250px;
     height: 60px;
     font-size: 30px;
-    margin-left: 750px;
+    margin-left: 75%;
+    margin-top: -15%;
     background-color: blue;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
 }

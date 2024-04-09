@@ -14,16 +14,15 @@ function Header() {
         <div className="header">
             <div className="left">
                 <span>Home</span>
-                <span>Design</span>        
+                {/* <span>Design</span>         */}
             </div>
             <div className="right">
-                <button className="headerBtn">
-                    <Link to="./login">LOGIN</Link>
-                </button>
-                <button className="headerBtn">
-                   <Link to="signup">SIGNUP</Link> 
-                </button>
-            
+                
+                    <Link to="./login"><button className="headerBtn">LOGIN</button></Link>
+                
+                
+                   <Link to="signup"><button className="headerBtn">SIGNUP</button></Link> 
+                            
             </div>
         </div>
       </>

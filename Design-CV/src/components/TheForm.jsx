@@ -11,6 +11,7 @@ import  { useState,  useRef } from "react";
 import html2canvas from "html2canvas"
 import jsPDF from "jspdf"
 import Style1 from "./Style1"
+
 import {Link} from "react-router-dom"
 function TheForm () {
    const pdfRef = useRef();
@@ -60,12 +61,13 @@ function TheForm () {
       <>
        <div className="form">
           <div className="formHeader">
-            <button className="formBtn">
-              <Link to="/">Back to home</Link>
-              </button>
+            
+              <Link to="/"><button className="formBtn">Back to home </button></Link>
+             
           </div>
           <hr />
           <div className="formMain" >
+          
             <div className="firstLine">
               <div className="img" onClick={handleImageClick}>
                 <img src={image} alt="Me"/> 

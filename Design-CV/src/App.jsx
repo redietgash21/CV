@@ -7,12 +7,12 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
+  // Route,
+  // Link,
 } from "react-router-dom"
 import './App.css'
 
-import Designs from './components/Designs.jsx'
+// import Designs from './components/Designs.jsx'
 
 import MainInterface from "./components/MainInterface.jsx"
 import TheForm from "./components/TheForm.jsx"
